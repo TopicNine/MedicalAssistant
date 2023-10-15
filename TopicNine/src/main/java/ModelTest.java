@@ -1,0 +1,33 @@
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/TopicNine9")
+public class ModelTest extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+
+    public ModelTest() {
+        super();
+     
+    }
+    
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String requestUri = request.getRequestURI();
+		request.setAttribute("requestUri", requestUri);
+		request.getRequestDispatcher("NewFile.jsp")
+		 .forward(request, response); 
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("Bmiresult.jsp")
+		 .forward(request, response);
+	}
+
+}
