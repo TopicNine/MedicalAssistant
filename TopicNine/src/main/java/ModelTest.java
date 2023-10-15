@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/TopicNine9")
+@WebServlet("/ModelTest")
 public class ModelTest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
